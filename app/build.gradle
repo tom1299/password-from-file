@@ -1,0 +1,26 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    implementation group: 'org.springframework', name: 'spring-expression', version: '5.3.13'
+//    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.13'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.6.0'
+}
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter('5.7.2')
+        }
+    }
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'com.jeeatwork.spring.spel.examples.App'
+}
